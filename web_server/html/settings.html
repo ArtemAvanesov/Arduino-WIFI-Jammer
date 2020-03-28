@@ -1,0 +1,211 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Убивака 2000</title>
+		<meta name="description" content="Wi-Fi Deauthenticator">
+		<meta name="author" content="Spacehuhn - Stefan Kremser">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="js/functions.js"></script>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<nav>
+			<a href="apscan.html">APs</a>
+			<a href="stations.html">Stations</a>
+			<a href="attack.html">Атаки</a>
+			<a href="settings.html">Настройки</a>
+			<a class="right" href="info.html">Инфо</a>
+		</nav>
+		<div id="error"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h1 class="header">Настройки</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<h2>Wi-Fi</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<label for="ssid">SSID</label>
+				</div>
+				<div class="col-6">
+					<input type="text" id="ssid" minlength="1" maxlength="32">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<label for="ssidHidden">Скрыть SSID</label>
+				</div>
+				<div class="col-6">
+					<input type="checkbox" name="ssidHidden" id="ssidHidden" value="false">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<label for="password">Пароль (минимум 8 символов)</label>
+				</div>
+				<div class="col-6">
+					<input type="text" id="password" minlength="8" maxlength="32">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<label for="apChannel">Канал</label>
+				</div>
+				<div class="col-6">
+					<input type="number" id="apChannel" min="1" max="14">
+				</div>
+			</div>
+			<br />
+			<div class="row">
+				<div class="col-12">
+					<h2>Сканирование AP</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<label for="apScanHidden">Сканирование скрытых AP</label>
+				</div>
+				<div class="col-6">
+					<input type="checkbox" name="apScanHidden" id="apScanHidden" value="false">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<label for="multiAPs">Выбор нескольких SSID</label>
+				</div>
+				<div class="col-6">
+					<input type="checkbox" name="multiAPs" id="multiAPs" value="false">
+				</div>
+			</div>
+			<br />
+			<div class="row">
+				<div class="col-12">
+					<h2>Station Scan</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<label for="scanTime">Время сканирования по умолчанию</label>
+				</div>
+				<div class="col-6">
+					<input type="number" id="scanTime" min="1" max="255"> сек
+				</div>
+			</div>
+			<br />
+			<div class="row">
+				<div class="col-12">
+					<h2>Атака</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<label for="timeout">Таймаут</label>
+				</div>
+				<div class="col-6">
+					<input type="number" id="timeout" min="-1" max="65536"> сек
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<label for="useLed">Использовать дисплей</label>
+				</div>
+				<div class="col-6">
+					<input type="checkbox" id="useLed" value="false">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<label for="ledPin">LED Pin (требуется перезагрузка)</label>
+				</div>
+				<div class="col-6">
+					<input type="number" id="ledPin" min="0" max="18">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<label for="ssidEnc">WPA2 Beacons</label>
+				</div>
+				<div class="col-6">
+					<input type="checkbox" id="ssidEnc" value="false">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<label for="beaconInterval">1s Beacon Interval (по умолчанию: 100ms)</label>
+				</div>
+				<div class="col-6">
+					<input type="checkbox" id="beaconInterval" value="false">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<label for="deauthReason">Deauth Reason-Code</label>
+				</div>
+				<div class="col-6">
+					<input type="number" id="deauthReason" min="1" max="45">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<label for="packetRate">Packetrate (<span class="red">may cause instability!</span>)</label>
+				</div>
+				<div class="col-6">
+					<input type="number" id="packetRate" min="1" max="50"> pkts/сек
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<label for="multiAttacks">Multiple Attacks</label>
+				</div>
+				<div class="col-6">
+					<input type="checkbox" id="multiAttacks" value="false">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<label for="macInterval">MAC Change Interval (used for beacons & probes)</label>
+				</div>
+				<div class="col-6">
+					<input type="number" id="macInterval" min="0" max="65000">сек
+				</div>
+			</div>
+			
+			
+			<!--
+			<div class="row">
+				<div class="col-6">
+					<label for="channelHop">Channel Hopping</label>
+				</div>
+				<div class="col-6">
+					<input type="checkbox" name="channelHop" id="channelHop" value="false">
+				</div>
+			</div>
+			-->
+			<div class="row">
+				<div class="col-12">
+					<br />
+					<button class="button-warn" onclick="resetSettings()">сброс</button> 
+					<button class="button-warn" onclick="restart()">перезагрузка</button> 
+					<button class="button-primary right" onclick="saveSettings()">сохранить</button>
+					<br class="clear" />
+					<p id="saved"></p>
+					<br class="clear" />
+
+					<div id="copyright">
+						<br />
+						Copyright (c) 2017 Artem Avanesov<br />
+						<br />
+					</div>
+						
+					<script src="js/settings.js"></script>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

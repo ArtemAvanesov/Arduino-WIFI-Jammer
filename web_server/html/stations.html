@@ -1,0 +1,75 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Убивака 2000</title>
+		<meta name="description" content="Wi-Fi Deauthenticator">
+		<meta name="author" content="Spacehuhn - Stefan Kremser">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="js/functions.js"></script>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<nav>
+			<a href="apscan.html">APs</a>
+			<a href="stations.html">Stations</a>
+			<a href="attack.html">Атаки</a>
+			<a href="settings.html">Настройки</a>
+			<a class="right" href="info.html">	Инфо</a>
+		</nav>
+		<div id="error"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h1 class="header">Сканирование Wi-Fi Stations</h1>
+			
+					<label for="scanTime">Время сканирования:</label>
+					<input type="number" id="scanTime" value="10">сек
+					
+					<button onclick="scan()" id="startScan" class="right button-primary">Начать</button>
+					<a id="clientScanStatus" class="right padding">сканирование...</a>
+					<br />
+					<p class="warn">Точки доступа могут быть недоступны в процессе сканирования, вы можете перезагрузить страницу, чтобы получить к ним доступ!<p>
+					<p>
+						Найдено stations: <span id="clientsFound">0</span>
+						<br />
+						<button class="marginNull button-primary left" onclick="select(-2)">убрать все</button>
+						<button class="marginNull button-primary right" onclick="select(-1)">выбрать все</button>
+					</p>
+					<br />
+					<table></table>
+					
+					<p class="block bold" >Сохраненные stations: <span id="clientNames"></span></p>
+					<table id="nameList"></table>
+					
+					<button class="button-warn left" onclick="clearNameList()">очистить</button>
+					<br class="clear" />
+					<p>Добавить station:</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-4">
+					<label>MAC <input type="text" placeholder="AA:BB:CC:DD:EE:FF" id="cMac"/></label>
+				</div>
+				<div class="col-4">
+					<label>ИМЯ <input type="text" placeholder="ПРИМЕР" id="cName"/></label>
+				</div>
+				<div class="col-4">
+					<button class="button-primary" onclick="addClient()">добавить</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<div id="copyright">
+						<br />
+						Copyright (c) 2017 Artem Avanesov<br />
+						<br />
+					</div>
+					
+					<script src="js/stations.js"></script>
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
