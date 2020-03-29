@@ -4,6 +4,8 @@
 
 ![Image alt](https://github.com/ArtemAvanesov/Arduino-WIFI-Jammer/raw/master/Изображения/model.jpg)
 
+![Image alt](https://github.com/ArtemAvanesov/Arduino-WIFI-Jammer/raw/master/Изображения/ingredients.jpg)
+
 ![Image alt](https://github.com/ArtemAvanesov/Arduino-WIFI-Jammer/raw/master/Изображения/board1.jpg)
 
 ![Image alt](https://github.com/ArtemAvanesov/Arduino-WIFI-Jammer/raw/master/Изображения/board2.jpg)
