@@ -10,6 +10,8 @@
 
 ![Image alt](https://github.com/ArtemAvanesov/Arduino-WIFI-Jammer/raw/master/Изображения/components.jpg)
 
+Корпус для глушилки решил позаимствовать у старого повербанка.
+
 ![Image alt](https://github.com/ArtemAvanesov/Arduino-WIFI-Jammer/raw/master/Изображения/case.jpg)
 
 Процесс изготовления платы: 
