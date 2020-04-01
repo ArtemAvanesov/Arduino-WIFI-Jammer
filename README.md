@@ -1,5 +1,13 @@
 # Глушилка WiFi на базе Arduino
 
+Компоненты моей глушилки: 
+- плата Nodemcu Lua Wi-Fi (Esp8266)
+- модуль зарядки литиевых аккумуляторов с type C
+- 3 светодиода
+- внешняя антена
+- кнопка
+- аккумулятор со старого телефона samsung
+
 ![Image alt](https://github.com/ArtemAvanesov/Arduino-WIFI-Jammer/raw/master/Изображения/components.jpg)
 
 ![Image alt](https://github.com/ArtemAvanesov/Arduino-WIFI-Jammer/raw/master/Изображения/case.jpg)
